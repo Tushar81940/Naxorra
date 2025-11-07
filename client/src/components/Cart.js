@@ -31,7 +31,7 @@ const Cart = ({ items, total, onClose, onRemove, onUpdateQuantity, onCheckout })
                   />
                   <div className="cart-item-details">
                     <h4 className="cart-item-name">{item.name}</h4>
-                    <div className="cart-item-price">${item.price.toFixed(2)} each</div>
+                    <div className="cart-item-price">₹{item.price.toFixed(2)} each</div>
                     <div className="cart-item-controls">
                       <button 
                         className="quantity-btn"
@@ -55,7 +55,7 @@ const Cart = ({ items, total, onClose, onRemove, onUpdateQuantity, onCheckout })
                       </button>
                     </div>
                     <div style={{ marginTop: '0.5rem', fontWeight: 'bold' }}>
-                      Subtotal: ${item.subtotal.toFixed(2)}
+                      Subtotal: ₹{item.subtotal.toFixed(2)}
                     </div>
                   </div>
                 </div>
@@ -64,7 +64,7 @@ const Cart = ({ items, total, onClose, onRemove, onUpdateQuantity, onCheckout })
             
             <div className="cart-total">
               <div className="cart-total-amount">
-                Total: ${total.toFixed(2)}
+                Total: ₹{total.toFixed(2)}
               </div>
             </div>
             

@@ -210,7 +210,7 @@ function App() {
           onClick={() => setShowCart(true)}
           disabled={!serverConnected}
         >
-          🛒 Cart ({cartItems.length}) - ${cartTotal.toFixed(2)}
+          🛒 Cart ({cartItems.length}) - ₹{cartTotal.toFixed(2)}
         </button>
       </header>
 

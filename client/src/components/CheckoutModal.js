@@ -38,12 +38,12 @@ const CheckoutModal = ({ cartItems, total, onClose, onSubmit, loading }) => {
           {cartItems.map(item => (
             <div key={item.id} className="order-item">
               <span>{item.name} × {item.quantity}</span>
-              <span>${item.subtotal.toFixed(2)}</span>
+              <span>₹{item.subtotal.toFixed(2)}</span>
             </div>
           ))}
           <div className="order-total">
             <span>Total:</span>
-            <span>${total.toFixed(2)}</span>
+            <span>₹{total.toFixed(2)}</span>
           </div>
         </div>
 
@@ -99,7 +99,7 @@ const CheckoutModal = ({ cartItems, total, onClose, onSubmit, loading }) => {
             className="submit-btn"
             disabled={loading}
           >
-            {loading ? '⏳ Processing...' : `🎉 Complete Order - $${total.toFixed(2)}`}
+            {loading ? '⏳ Processing...' : `🎉 Complete Order - ₹${total.toFixed(2)}`}
           </button>
         </form>
       </div>

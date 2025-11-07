@@ -39,13 +39,13 @@ const ReceiptModal = ({ receipt, onClose }) => {
             {receipt.items.map(item => (
               <div key={item.id} className="order-item">
                 <span>{item.name} × {item.quantity}</span>
-                <span>${item.subtotal.toFixed(2)}</span>
+                <span>₹{item.subtotal.toFixed(2)}</span>
               </div>
             ))}
           </div>
           
           <div className="receipt-total">
-            ${receipt.total.toFixed(2)}
+            ₹{receipt.total.toFixed(2)}
           </div>
           
           <div className="receipt-timestamp">
